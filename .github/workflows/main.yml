@@ -27,5 +27,5 @@ jobs:
           pip install -r requirements.txt
 
       - name: execute py script # esegui script
-        run: python scrape_cerca-offerte.py
+        run: python scrapeOfferteConad.py
         
