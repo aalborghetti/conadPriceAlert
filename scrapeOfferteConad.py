@@ -21,13 +21,13 @@ def scrape(site):
    
     # estrazione dati dalla pagina
     try:
-        DESCRIZIONE = contenitore.find("h1", class_ = "add-to-cart-product-name").get_text().strip()
+        DESCRIZIONE = contenitore.find("h1", class_ = "product-title").get_text().strip()
         #print (DESCRIZIONE)
-        MARCA = contenitore.find("div", class_ = "add-to-cart-product-brand").get_text().strip()
+        MARCA = contenitore.find("div", class_ = "product-title").get_text().strip()
         #print (MARCA)
-        PREZZO_PRECEDENTE = contenitore.find("div", class_ = "old-price").get_text().strip()
+        PREZZO_PRECEDENTE = contenitore.find("div", class_ = "product-price").get_text().strip()
         #print (PREZZO_PRECEDENTE)
-        PREZZO_ATTUALE = contenitore.find("div", class_ = "final-price").get_text().strip()
+        PREZZO_ATTUALE = contenitore.find("div", class_ = "product-price").get_text().strip()
         #print (PREZZO_ATTUALE)
     except:
         PREZZO_PRECEDENTE = ""
